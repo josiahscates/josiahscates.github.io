@@ -247,6 +247,76 @@ a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--oliv
 }
 .footer a { color: #cfd2c6; text-decoration: none; }
 .footer a:hover { color: #fff; }
+.footer-links { display: flex; gap: 22px; }
+
+/* ---------- Team Portal ---------- */
+.portal-body { background: var(--stone); }
+.portal-main { padding: 48px 0 72px; }
+.portal-notice {
+  background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--brass);
+  border-radius: 10px; padding: 18px 22px; font-size: .93rem; color: var(--slate-soft);
+  margin-bottom: 40px;
+}
+.portal-notice strong, .portal-notice em { color: var(--slate); }
+.portal-title {
+  font-size: clamp(1.9rem, 3.5vw, 2.5rem); font-weight: 600; color: var(--slate);
+}
+.portal-lead { color: var(--slate-soft); margin-top: 6px; }
+.portal-section + .portal-section { margin-top: 48px; }
+.portal-h2 {
+  font-size: 1.5rem; font-weight: 600; color: var(--slate); margin-bottom: 6px;
+}
+.portal-announce {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px 26px; margin-top: 24px;
+}
+.portal-announce h2 {
+  font-size: 1.2rem; font-weight: 600; color: var(--olive-deep); margin-bottom: 10px;
+}
+.portal-announce ul { list-style: none; }
+.portal-announce li { padding: 6px 0; color: var(--slate-soft); font-size: .95rem; }
+.announce-date {
+  display: inline-block; background: var(--stone); color: var(--olive-deep);
+  font-size: .75rem; font-weight: 600; padding: 2px 8px; border-radius: 5px;
+  margin-right: 10px; text-transform: uppercase; letter-spacing: .04em;
+}
+.portal-fineprint { font-size: .8rem; color: var(--taupe); margin-top: 10px; }
+.portal-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 18px; margin-top: 22px;
+}
+.portal-tile {
+  background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  padding: 20px 22px; display: flex; flex-direction: column; gap: 8px;
+  text-decoration: none;
+}
+.portal-tile h3 {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 1.02rem; font-weight: 600; color: var(--slate);
+}
+.portal-tile p { color: var(--slate-soft); font-size: .88rem; flex: 1; }
+.tile-pending {
+  align-self: flex-start; font-size: .75rem; font-weight: 600;
+  color: var(--taupe); background: var(--stone);
+  padding: 4px 10px; border-radius: 5px; letter-spacing: .03em;
+}
+.tile-go {
+  align-self: flex-start; font-size: .8rem; font-weight: 600; color: var(--brass);
+}
+.portal-tile-link { transition: transform .12s, border-color .15s; }
+.portal-tile-link:hover { transform: translateY(-2px); border-color: var(--brass); }
+.portal-security {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 30px;
+}
+.portal-security ul { list-style: none; margin-top: 14px; }
+.portal-security li {
+  padding: 8px 0 8px 26px; position: relative; color: var(--slate-soft); font-size: .95rem;
+}
+.portal-security li::before {
+  content: "•"; position: absolute; left: 8px; color: var(--olive); font-weight: 700;
+}
+.portal-security strong { color: var(--slate); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 820px) {
