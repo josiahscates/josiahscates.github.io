@@ -3,241 +3,619 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Olive & Atlas Construction — thoughtful residential construction, renovation, and remodeling in Northwest Arkansas. Refined craftsmanship, honest communication, and care for your home and neighborhood.">
-  <title>Olive &amp; Atlas Construction — Thoughtful Building in Northwest Arkansas</title>
+  <title>Olive &amp; Atlas Construction | Custom Home Builder &amp; Renovations in Northwest Arkansas</title>
+  <meta name="description" content="Olive & Atlas Construction is a locally owned residential builder serving Northwest Arkansas — custom homes, renovations, and additions in Fayetteville, Bentonville, Rogers, Springdale, and surrounding communities, built with clear communication and refined craftsmanship.">
+  <link rel="canonical" href="https://josiahscates.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Olive & Atlas Construction — Custom Homes & Renovations in Northwest Arkansas">
+  <meta property="og:description" content="Thoughtful construction, refined craftsmanship, and honest guidance for Northwest Arkansas homeowners. Locally owned. Owner-led communication on every project.">
+  <meta property="og:url" content="https://josiahscates.github.io/">
+  <meta property="og:locale" content="en_US">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Local business structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Olive & Atlas Construction",
+    "legalName": "Scates Global Solutions LLC",
+    "url": "https://josiahscates.github.io/",
+    "telephone": "+1-479-544-0069",
+    "email": "jmarkscates@gmail.com",
+    "founder": { "@type": "Person", "name": "Josiah Scates" },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Prairie Grove",
+      "addressRegion": "AR",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      "Fayetteville AR", "Bentonville AR", "Rogers AR", "Springdale AR",
+      "Bella Vista AR", "Cave Springs AR", "Centerton AR", "Lowell AR",
+      "Prairie Grove AR", "Farmington AR", "Siloam Springs AR", "Northwest Arkansas"
+    ],
+    "description": "Locally owned residential construction company serving Northwest Arkansas homeowners with custom homes, renovations, and additions."
+  }
+  </script>
 </head>
-<body>
+<body id="top">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">
-        <span class="brand-mark">O·A</span>
+      <a class="brand" href="#top" aria-label="Olive and Atlas Construction — home">
+        <span class="brand-mark" aria-hidden="true">O·A</span>
         <span class="brand-name">Olive &amp; Atlas <span class="brand-sub">Construction</span></span>
-      </div>
-      <nav class="nav">
-        <a href="#about">About</a>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Main navigation">
+        <a href="#top">Home</a>
         <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
         <a href="#projects">Projects</a>
-        <a href="#promise">Our Promise</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
         <a href="#contact" class="nav-cta">Schedule a Consultation</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <p class="hero-kicker">Northwest Arkansas · Residential Construction &amp; Renovation</p>
-      <h1>Thoughtful construction.<br>Refined craftsmanship.<br><em>Built with care.</em></h1>
-      <p class="hero-sub">
-        Olive &amp; Atlas delivers high-quality residential construction and renovation with
-        the care, communication, and craftsmanship your home deserves — at a price that
-        feels responsible.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
-        <a href="#promise" class="btn btn-ghost">Our Promise to You</a>
-      </div>
-    </div>
-    <div class="hero-band">
-      <div class="container hero-band-inner">
-        <div><strong>Local &amp; Family-Run</strong><span>Prairie Grove roots</span></div>
-        <div><strong>Craft Over Flash</strong><span>Details you can feel</span></div>
-        <div><strong>Honest Numbers</strong><span>Budgets that hold</span></div>
-        <div><strong>Your Neighborhood</strong><span>Treated like our own</span></div>
-      </div>
-    </div>
-  </section>
+  <main id="main">
 
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Who We Are</span>
-        <h2>Your neighbors, who happen to build beautiful homes.</h2>
+    <!-- ============ 2. HERO ============ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <p class="hero-kicker">Custom Homes · Renovations · Additions — Northwest Arkansas</p>
+        <h1 id="hero-heading">Thoughtful construction.<br>Refined craftsmanship.<br><em>Built with care.</em></h1>
+        <p class="hero-sub">
+          Olive &amp; Atlas Construction helps Northwest Arkansas homeowners plan and build
+          custom homes, renovations, and residential projects with clear communication,
+          honest guidance, and craftsmanship that respects your home, your budget, and
+          your vision.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+          <a href="#process" class="btn btn-ghost">View Our Process</a>
+        </div>
       </div>
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>
-            Olive &amp; Atlas Construction is a family-run building company rooted in Prairie
-            Grove and serving the communities of Northwest Arkansas — Fayetteville, Springdale,
-            Rogers, Bentonville, Bella Vista, Siloam Springs, Farmington, and the towns in between.
-            These aren't just markets to us. They're where we live, where our kids grow up,
-            and where we run into our clients at the grocery store.
-          </p>
-          <p>
-            We started this company on a simple conviction: real luxury isn't a bigger price tag.
-            It's proportion and light. It's storage where you need it and quiet where you want it.
-            It's a house that stays dry, comfortable, and solid for decades. Those things come
-            from careful planning and disciplined building — not from spending more.
-          </p>
-          <p>
-            So that's what we do. We plan every project like it's our own home, we tell you the
-            truth about where money matters and where it doesn't, and we build the details
-            you'll touch every day like someone's going to notice. Because you will.
+
+      <!-- ============ 3. TRUST BAR ============ -->
+      <div class="hero-band" role="presentation">
+        <div class="container hero-band-inner">
+          <div><strong>Locally Owned</strong><span>Rooted in Prairie Grove</span></div>
+          <div><strong>Owner-Led Communication</strong><span>You talk to the builder</span></div>
+          <div><strong>Quality Checkpoints</strong><span>Inspected before it's covered</span></div>
+          <div><strong>Clear Documentation</strong><span>Decisions in writing</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. SERVICES ============ -->
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">What We Do</span>
+          <h2 id="services-heading">Residential construction, planned properly.</h2>
+          <p class="section-lead">
+            Every service starts the same way: a real conversation about what you want,
+            what it should cost, and whether it's worth doing. Here's how we can help.
           </p>
         </div>
-        <div class="about-side">
-          <div class="fact"><span class="fact-label">Rooted in</span>Prairie Grove, Arkansas</div>
-          <div class="fact"><span class="fact-label">Serving</span>All of Northwest Arkansas</div>
-          <div class="fact"><span class="fact-label">Registered</span>Arkansas LLC · Est. 2025</div>
-          <div class="fact"><span class="fact-label">Our lens</span>Luxury feel, responsible price</div>
+        <div class="cards">
+          <article class="card">
+            <span class="card-num">01</span>
+            <h3>Custom Homes</h3>
+            <p>
+              For homeowners building on their own lot or one we help you find. We plan
+              around how you actually live — sightlines, light, storage, comfort — before
+              the first shovel of dirt moves. The first step is a consultation and a
+              feasibility conversation about your lot and budget.
+            </p>
+            <a class="card-cta" href="#contact">Start planning your home →</a>
+          </article>
+          <article class="card">
+            <span class="card-num">02</span>
+            <h3>Renovations &amp; Remodeling</h3>
+            <p>
+              Kitchens, baths, and whole-home renovations — with honest guidance about
+              which changes genuinely improve daily life and resale, and which just cost
+              money. We start with a walkthrough of your home and a scope conversation.
+            </p>
+            <a class="card-cta" href="#contact">Discuss your renovation →</a>
+          </article>
+          <article class="card">
+            <span class="card-num">03</span>
+            <h3>Additions</h3>
+            <p>
+              More room without moving — additions planned to match your home's structure,
+              proportions, and neighborhood, not bolt-ons that look like afterthoughts.
+              The first step is a site review and preliminary budget range.
+            </p>
+            <a class="card-cta" href="#contact">Request a project review →</a>
+          </article>
+          <article class="card">
+            <span class="card-num">04</span>
+            <h3>Preconstruction &amp; Feasibility</h3>
+            <p>
+              Not sure yet? This is where smart projects start. Lot evaluation, market and
+              budget analysis, scope planning, and design coordination — so you know what's
+              realistic before committing to construction.
+            </p>
+            <a class="card-cta" href="#contact">Request a feasibility review →</a>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="services" class="section section-stone">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">What We Do</span>
-        <h2>Four ways we can care for your home.</h2>
+    <!-- ============ 5. WHY OLIVE & ATLAS ============ -->
+    <section id="why" class="section section-stone" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Why Olive &amp; Atlas</span>
+          <h2 id="why-heading">Care is our competitive advantage.</h2>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <h3>You talk to the owner</h3>
+            <p>No account managers, no telephone chains. The person planning your budget and walking your framing is the person who answers your call.</p>
+          </div>
+          <div class="pillar">
+            <h3>Planning before building</h3>
+            <p>Most construction problems are planning problems in disguise. We resolve scope, budget, and decisions on paper — where changes are cheap — before they reach the jobsite.</p>
+          </div>
+          <div class="pillar">
+            <h3>Honest budget conversations</h3>
+            <p>We'll tell you when the premium option is worth it — and when it isn't. Craftsmanship where you'll feel it daily, practicality where you won't.</p>
+          </div>
+          <div class="pillar">
+            <h3>Respect for your home and street</h3>
+            <p>Clean job sites, protected floors, considerate scheduling, and crews your neighbors won't mind seeing. How we work says everything about how we build.</p>
+          </div>
+        </div>
       </div>
-      <div class="cards">
-        <div class="card">
-          <span class="card-num">01</span>
-          <h3>New Home Construction</h3>
+    </section>
+
+    <!-- ============ 6. OWNER INTRODUCTION ============ -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">About the Owner</span>
+          <h2 id="about-heading">Meet Josiah Scates.</h2>
+        </div>
+        <div class="owner-grid">
+          <div class="owner-photo" role="img" aria-label="Owner photo coming soon">
+            <span>Owner photo<br>coming soon</span>
+            <!-- [Add owner photo: replace this placeholder div with <img src="owner.jpg" alt="Josiah Scates, owner of Olive & Atlas Construction">] -->
+          </div>
+          <div class="owner-copy">
+            <p class="owner-quote">
+              "I founded Olive &amp; Atlas Construction because homeowners deserve a
+              construction experience built around clear communication, honest guidance,
+              and craftsmanship that lasts."
+            </p>
+            <p>
+              Olive &amp; Atlas is a family-run company based in Prairie Grove. Before any
+              project begins, we do the homework — studying lots, budgets, and neighborhoods
+              block by block — because a well-planned project is the only kind that finishes
+              well. That planning-first discipline is the foundation of how we build.
+            </p>
+            <p>
+              When you work with Olive &amp; Atlas, you communicate directly with me at every
+              stage: planning, budget, construction, and closeout. My name is on this work,
+              and I treat every home like it's in my own neighborhood — because around here,
+              it usually is.
+            </p>
+            <p class="owner-sig">— Josiah Scates, Owner</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. OUR PROMISE ============ -->
+    <section id="promise" class="section section-olive" aria-labelledby="promise-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow eyebrow-light">The Olive &amp; Atlas Promise</span>
+          <h2 id="promise-heading">What we owe you on every project.</h2>
+        </div>
+        <ul class="promise-list">
+          <li><strong>The truth about cost.</strong> A real budget before we start, and a straight answer the moment anything threatens it.</li>
+          <li><strong>Decisions in writing.</strong> Scope, selections, and changes documented — so there's never a "we never agreed to that."</li>
+          <li><strong>A clear change-order process.</strong> If something changes, you'll see the cost and schedule impact before work proceeds — never after.</li>
+          <li><strong>Craftsmanship you can inspect.</strong> Walk any stage of the work with us — we hold quality checkpoints before anything gets covered.</li>
+          <li><strong>Guidance, not upselling.</strong> If a cheaper path serves you better, that's the one we'll recommend.</li>
+          <li><strong>Respect for your home and street.</strong> Tidy sites, considerate scheduling, and crews we'd welcome into our own houses.</li>
+          <li><strong>A phone that gets answered.</strong> During your project and after it. Our name is on this work.</li>
+        </ul>
+        <div class="promise-cta">
+          <a href="#contact" class="btn btn-brass">Start Your Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. CURRENT WORK & PROJECT HIGHLIGHTS ============ -->
+    <section id="projects" class="section section-stone" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our Work</span>
+          <h2 id="projects-heading">Current work &amp; project highlights.</h2>
+        </div>
+        <div class="projects-status">
           <p>
-            Ground-up homes designed around how you actually live — sightlines, natural light,
-            storage, and comfort planned before the first shovel of dirt moves. Built on lots
-            we've studied block by block.
+            Our first Northwest Arkansas projects are in planning and preconstruction now.
+            As they move to framing, finishes, and completion, you'll see them here —
+            photographed honestly, labeled clearly, and shown the way they'll actually
+            look on a Tuesday. No stock photos presented as our work, ever.
+          </p>
+          <p>
+            In the meantime, we're glad to walk you through our planning process and
+            current project pipeline in person.
+          </p>
+          <a href="#contact" class="btn btn-primary">Ask About Current Projects</a>
+        </div>
+        <!--
+        PROJECT CARD TEMPLATE — copy inside the .gallery grid when real projects exist.
+        Every card must carry an accurate status label: Completed / In Progress / Rendering / Inspiration / Sample.
+        [Add project photo] [Confirm project details]
+
+        <div class="gallery">
+          <article class="project-card">
+            <img src="project1.jpg" alt="DESCRIBE THE ACTUAL PHOTO" loading="lazy" width="800" height="600">
+            <div class="project-meta">
+              <span class="project-status">In Progress</span>
+              <h3>Project Name</h3>
+              <p class="project-loc">City, AR · Project type</p>
+              <p>Short honest description of scope and status.</p>
+            </div>
+          </article>
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- ============ 9. CONSTRUCTION PROCESS ============ -->
+    <section id="process" class="section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">How It Works</span>
+          <h2 id="process-heading">A process built to remove uncertainty.</h2>
+          <p class="section-lead">
+            Most people have never hired a builder before — and the industry doesn't make
+            it easy. Here's exactly what working with us looks like, start to finish.
           </p>
         </div>
-        <div class="card">
-          <span class="card-num">02</span>
-          <h3>Renovations</h3>
-          <p>
-            Breathing new life into good bones. We renovate with respect for what your home
-            already is — and honest guidance about which changes will genuinely improve
-            your daily life and which ones just cost money.
+        <ol class="process-list">
+          <li>
+            <h3><span class="step-num">1</span>Initial Consultation</h3>
+            <p>A no-pressure conversation — by phone or in person — about what you're imagining, your rough budget, and your timeline. You'll leave knowing whether the project is realistic.</p>
+          </li>
+          <li>
+            <h3><span class="step-num">2</span>Site or Property Review</h3>
+            <p>We walk your lot or home, looking at the things that quietly drive cost: slope, drainage, access, structure, and utilities. No surprises later that were visible now.</p>
+          </li>
+          <li>
+            <h3><span class="step-num">3</span>Scope &amp; Preliminary Budget</h3>
+            <p>A written scope and realistic budget range — before design money is spent. We'll flag where costs are most likely to move and what decisions drive them.</p>
+          </li>
+          <li>
+            <h3><span class="step-num">4</span>Design &amp; Preconstruction</h3>
+            <p>Plans, selections, and engineering coordinated with decision deadlines that protect your schedule. The goal: every expensive decision made on paper, not in the field.</p>
+          </li>
+          <li>
+            <h3><span class="step-num">5</span>Proposal &amp; Agreement</h3>
+            <p>A clear written proposal: scope, price, allowances, schedule, and how changes are handled. You'll understand what you're signing — we'll walk every line with you.</p>
+          </li>
+          <li>
+            <h3><span class="step-num">6</span>Construction &amp; Progress Updates</h3>
+            <p>Regular updates on schedule and budget, quality checkpoints at every stage before work gets covered, and a clean, organized jobsite your neighbors won't resent.</p>
+          </li>
+          <li>
+            <h3><span class="step-num">7</span>Final Walkthrough &amp; Closeout</h3>
+            <p>A detailed walkthrough together, a punch list completed promptly, and your documentation package. Then a phone that still gets answered after we're paid.</p>
+          </li>
+        </ol>
+        <div class="process-cta">
+          <a href="#contact" class="btn btn-primary">Start the Conversation</a>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    ============ 10. TESTIMONIALS — HIDDEN UNTIL REAL ONES EXIST ============
+    Do not publish fabricated testimonials. Uncomment and fill when real quotes are collected.
+    [Add real testimonial] — supports homeowners, contractors, suppliers, professional references.
+
+    <section id="testimonials" class="section section-stone" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">What People Say</span>
+          <h2 id="testimonials-heading">Trusted by homeowners and professionals.</h2>
+        </div>
+        <div class="cards">
+          <blockquote class="testimonial">
+            <p>"REAL QUOTE HERE"</p>
+            <footer>— Name, Role or project relationship, Company if applicable</footer>
+          </blockquote>
+        </div>
+        Future credibility assets go here: [Google review rating] [Professional affiliations]
+        [Supplier relationships] [Licensing information — confirm before displaying]
+        [Insurance information — confirm before displaying]
+      </div>
+    </section>
+    -->
+
+    <!-- ============ 11. SERVICE AREA ============ -->
+    <section id="service-area" class="section section-stone" aria-labelledby="area-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Where We Build</span>
+          <h2 id="area-heading">Serving homeowners across Northwest Arkansas.</h2>
+        </div>
+        <p class="section-lead area-copy">
+          Olive &amp; Atlas Construction is based in Prairie Grove and serves homeowners
+          throughout Northwest Arkansas, including <strong>Fayetteville</strong>,
+          <strong>Bentonville</strong>, <strong>Rogers</strong>, <strong>Springdale</strong>,
+          <strong>Bella Vista</strong>, <strong>Cave Springs</strong>, <strong>Centerton</strong>,
+          <strong>Lowell</strong>, <strong>Farmington</strong>, <strong>Siloam Springs</strong>,
+          and the surrounding communities. If you're not sure whether we build in your area,
+          just ask — the answer is usually yes.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 12. FAQ ============ -->
+    <section id="faq" class="section" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Common Questions</span>
+          <h2 id="faq-heading">Answers before you even ask.</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>What areas do you serve?</summary>
+            <p>All of Northwest Arkansas — Fayetteville, Bentonville, Rogers, Springdale, Bella Vista, Cave Springs, Centerton, Lowell, Prairie Grove, Farmington, Siloam Springs, and nearby communities.</p>
+          </details>
+          <details>
+            <summary>What types of projects do you take on?</summary>
+            <p>Custom homes, renovations, remodels, additions, and preconstruction planning. If you're unsure whether your project fits, a quick phone call will sort it out.</p>
+          </details>
+          <details>
+            <summary>How early should I contact a builder?</summary>
+            <p>Earlier than you think — ideally before you buy a lot or finalize plans. The cheapest problems to fix are the ones caught during planning, and early feasibility review is one of the most valuable things we do.</p>
+          </details>
+          <details>
+            <summary>Do you help with plans, design, engineering, and permits?</summary>
+            <p>Yes — we coordinate design, engineering, and permitting as part of preconstruction, and we're glad to work alongside an architect or designer you've already chosen.</p>
+          </details>
+          <details>
+            <summary>Can I use my own architect or plans?</summary>
+            <p>Absolutely. We'll review your existing plans, flag anything that affects cost or constructability, and build from them.</p>
+          </details>
+          <details>
+            <summary>How is the preliminary budget developed?</summary>
+            <p>From a written scope, current local costs, and your site's specifics — not a generic square-foot number. We'll also tell you which parts of the budget are firm and which could move, and what decisions control them.</p>
+          </details>
+          <details>
+            <summary>How are change orders handled?</summary>
+            <p>In writing, before the work happens. You'll see the cost and schedule impact of any change and approve it first — no surprise invoices at the end.</p>
+          </details>
+          <details>
+            <summary>How often will I get updates during construction?</summary>
+            <p>On a regular schedule you can count on, plus immediately whenever something needs your decision. You'll always know where the project stands, and you talk directly with the owner.</p>
+          </details>
+          <details>
+            <summary>How long does a typical project take?</summary>
+            <p>It depends on scope — a renovation and a full custom home are very different animals. What we commit to: a realistic schedule up front, honest updates when anything shifts, and no schedule promises we can't keep.</p>
+          </details>
+          <details>
+            <summary>What happens during the first consultation?</summary>
+            <p>We listen. You tell us what you're imagining, we ask questions about how you live, your budget comfort zone, and your timeline — and we give you an honest read on feasibility. No pressure, no obligation, no fee.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 13/14. FINAL CTA + CONTACT ============ -->
+    <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Let's Talk</span>
+          <h2 id="contact-heading">Tell us about your home.</h2>
+          <p class="section-lead">
+            Tell us a little about your project below. We'll review it and follow up to
+            discuss scope, timing, budget expectations, and next steps — a real conversation,
+            not a sales pitch.
           </p>
         </div>
-        <div class="card">
-          <span class="card-num">03</span>
-          <h3>Remodeling &amp; Additions</h3>
-          <p>
-            Kitchens, baths, and the spaces you use most — remodeled with the finish quality
-            of a luxury build and the budget discipline of someone spending their own money.
-            Because that's how we treat it.
-          </p>
-        </div>
-        <div class="card">
-          <span class="card-num">04</span>
-          <h3>Project Planning &amp; Management</h3>
-          <p>
-            Already have plans or a builder gap to fill? We bring structured scheduling,
-            trade coordination, and stage-by-stage quality checks — so problems get caught
-            before they get covered up.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="why" class="section">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Why Olive &amp; Atlas</span>
-        <h2>Care is our competitive advantage.</h2>
-      </div>
-      <div class="pillars">
-        <div class="pillar">
-          <h3>We treat your home like ours</h3>
-          <p>Clean job sites, protected floors, respectful crews, and neighbors who aren't sorry we showed up. How we work in your home says everything about how we'll build it.</p>
-        </div>
-        <div class="pillar">
-          <h3>We communicate like adults</h3>
-          <p>You'll always know where your project stands, what's next, and what it costs. No vanishing acts, no surprise invoices, no "we'll figure it out later."</p>
-        </div>
-        <div class="pillar">
-          <h3>We sweat the details</h3>
-          <p>Reveals that line up. Doors that close softly. Trim that meets clean. The small things aren't small — they're the difference between a house and a home you love.</p>
-        </div>
-        <div class="pillar">
-          <h3>We spend your money carefully</h3>
-          <p>We'll tell you when the premium option is worth it — and when it isn't. Luxury where you'll feel it daily, practicality where you won't. That's how quality stays affordable.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="contact-layout">
+          <form class="contact-form" id="project-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="f-name" name="name" required autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="f-email" name="email" required autocomplete="email">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="f-phone">Phone</label>
+                <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+              </div>
+              <div class="form-field">
+                <label for="f-location">Project location (city)</label>
+                <input type="text" id="f-location" name="location" placeholder="e.g. Fayetteville">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="f-type">Project type</label>
+                <select id="f-type" name="type">
+                  <option value="">Select one…</option>
+                  <option>Custom home</option>
+                  <option>Renovation / remodel</option>
+                  <option>Addition</option>
+                  <option>Lot / feasibility review</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="f-start">Desired start</label>
+                <select id="f-start" name="start">
+                  <option value="">Select one…</option>
+                  <option>As soon as possible</option>
+                  <option>3–6 months</option>
+                  <option>6–12 months</option>
+                  <option>Just planning ahead</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="f-budget">Approximate budget range</label>
+                <select id="f-budget" name="budget">
+                  <option value="">Select one…</option>
+                  <option>Under $100k</option>
+                  <option>$100k–$300k</option>
+                  <option>$300k–$600k</option>
+                  <option>$600k+</option>
+                  <option>Need guidance</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="f-contact-pref">Preferred contact method</label>
+                <select id="f-contact-pref" name="contactPref">
+                  <option value="">Select one…</option>
+                  <option>Phone call</option>
+                  <option>Text</option>
+                  <option>Email</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="f-desc">Tell us about your project <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="f-desc" name="description" rows="4" required placeholder="A sentence or two is plenty to start."></textarea>
+            </div>
+            <p class="form-note">Fields marked <span class="req">*</span> are required. Submitting opens a pre-filled email in your mail app — nothing is stored on this website.</p>
+            <button type="submit" class="btn btn-primary">Schedule a Consultation</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
 
-  <section id="projects" class="section section-stone">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Our Work</span>
-        <h2>Projects taking shape.</h2>
-      </div>
-      <p class="section-lead">
-        Our first Northwest Arkansas builds are underway. As they finish, you'll find them
-        here — photographed honestly, the way they'll actually look on a Tuesday.
-      </p>
-      <div class="gallery">
-        <div class="gallery-tile"><span>Coming Soon</span></div>
-        <div class="gallery-tile"><span>Coming Soon</span></div>
-        <div class="gallery-tile"><span>Coming Soon</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="promise" class="section section-olive">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow eyebrow-light">The Olive &amp; Atlas Promise</span>
-        <h2>What we owe you on every project.</h2>
-      </div>
-      <ul class="promise-list">
-        <li><strong>The truth about cost.</strong> A real budget before we start, and a straight answer the moment anything threatens it.</li>
-        <li><strong>Respect for your home and street.</strong> Tidy sites, considerate scheduling, and crews we'd welcome into our own houses.</li>
-        <li><strong>Craftsmanship you can inspect.</strong> Walk any stage of the work with us — we hold quality checkpoints before anything gets covered.</li>
-        <li><strong>Guidance, not upselling.</strong> If a cheaper path serves you better, that's the one we'll recommend.</li>
-        <li><strong>A phone that gets answered.</strong> During your project and after it. Our name is on this work.</li>
-      </ul>
-      <div class="promise-cta">
-        <a href="#contact" class="btn btn-brass">Start Your Project</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section section-contact">
-    <div class="container">
-      <div class="section-heading">
-        <span class="eyebrow">Let's Talk</span>
-        <h2>Tell us about your home.</h2>
-      </div>
-      <p class="section-lead">
-        Whether it's a lot you're dreaming about, a kitchen that's overdue, or a whole-home
-        build — we'd love to hear what you're imagining. No pressure, no obligation.
-        Just a real conversation about your home.
-      </p>
-      <div class="contact-grid">
-        <a class="contact-item" href="tel:+14795440069">
-          <span class="contact-label">Call or Text</span>
-          (479) 544-0069
-        </a>
-        <a class="contact-item" href="mailto:jmarkscates@gmail.com">
-          <span class="contact-label">Email</span>
-          jmarkscates@gmail.com
-        </a>
-        <div class="contact-item">
-          <span class="contact-label">Where We Build</span>
-          Prairie Grove &amp; Northwest Arkansas
+          <div class="contact-side">
+            <a class="contact-item" href="tel:+14795440069">
+              <span class="contact-label">Call or Text</span>
+              (479) 544-0069
+            </a>
+            <a class="contact-item" href="mailto:jmarkscates@gmail.com">
+              <span class="contact-label">Email</span>
+              jmarkscates@gmail.com
+            </a>
+            <div class="contact-item">
+              <span class="contact-label">Based In</span>
+              Prairie Grove, Arkansas
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+  </main>
+
+  <!-- ============ 15. FOOTER ============ -->
   <footer class="footer">
     <div class="container footer-inner">
       <span>&copy; 2026 Olive &amp; Atlas Construction · Scates Global Solutions LLC · Prairie Grove, Arkansas</span>
       <span class="footer-links">
         <a href="portal.html">Employee Portal</a>
-        <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+        <a href="#top">Back to top ↑</a>
       </span>
     </div>
   </footer>
+
+  <!-- FAQ structured data (mirrors visible FAQ content) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What areas do you serve?", "acceptedAnswer": {"@type": "Answer", "text": "All of Northwest Arkansas — Fayetteville, Bentonville, Rogers, Springdale, Bella Vista, Cave Springs, Centerton, Lowell, Prairie Grove, Farmington, Siloam Springs, and nearby communities."}},
+      {"@type": "Question", "name": "What types of projects do you take on?", "acceptedAnswer": {"@type": "Answer", "text": "Custom homes, renovations, remodels, additions, and preconstruction planning."}},
+      {"@type": "Question", "name": "How early should I contact a builder?", "acceptedAnswer": {"@type": "Answer", "text": "Earlier than you think — ideally before you buy a lot or finalize plans. Early feasibility review catches the cheapest problems to fix."}},
+      {"@type": "Question", "name": "Do you help with plans, design, engineering, and permits?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — we coordinate design, engineering, and permitting as part of preconstruction, and we work alongside architects and designers you've already chosen."}},
+      {"@type": "Question", "name": "How are change orders handled?", "acceptedAnswer": {"@type": "Answer", "text": "In writing, before the work happens. You see the cost and schedule impact of any change and approve it first."}},
+      {"@type": "Question", "name": "What happens during the first consultation?", "acceptedAnswer": {"@type": "Answer", "text": "We listen, ask questions about how you live, your budget comfort zone, and your timeline — and give you an honest read on feasibility. No pressure, no obligation, no fee."}}
+    ]
+  }
+  </script>
+
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          nav.classList.remove('nav-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    // Contact form → composes a pre-filled email (static site: no backend).
+    // To switch to a form service later, replace this handler with a normal POST action.
+    (function () {
+      var form = document.getElementById('project-form');
+      var status = document.getElementById('form-status');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = form.name.value.trim();
+        var email = form.email.value.trim();
+        var desc = form.description.value.trim();
+        if (!name || !email || !desc) {
+          status.textContent = 'Please fill in your name, email, and a short project description.';
+          status.className = 'form-status form-error';
+          return;
+        }
+        var lines = [
+          'Name: ' + name,
+          'Email: ' + email,
+          'Phone: ' + (form.phone.value || '—'),
+          'Project location: ' + (form.location.value || '—'),
+          'Project type: ' + (form.type.value || '—'),
+          'Desired start: ' + (form.start.value || '—'),
+          'Budget range: ' + (form.budget.value || '—'),
+          'Preferred contact: ' + (form.contactPref.value || '—'),
+          '',
+          'Project description:',
+          desc
+        ];
+        var subject = encodeURIComponent('Consultation request — ' + name);
+        var body = encodeURIComponent(lines.join('\n'));
+        window.location.href = 'mailto:jmarkscates@gmail.com?subject=' + subject + '&body=' + body;
+        status.textContent = 'Your email app should open with your details filled in. If it doesn\'t, email us directly at jmarkscates@gmail.com or call (479) 544-0069.';
+        status.className = 'form-status form-success';
+      });
+    })();
+  </script>
 
 </body>
 </html>
