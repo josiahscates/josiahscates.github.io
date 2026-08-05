@@ -1,14 +1,14 @@
 /* Anabasis Construction — site styles
-   Palette: olive green · warm cream · stone/taupe · deep slate · brass accents */
+   Palette: terracotta & clay · warm stone · deep umber slate · brass accents */
 :root {
-  --olive: #5c6b47;
-  --olive-deep: #3d4a2f;
-  --olive-night: #2e3824;
+  --terracotta: #a8502f;
+  --terracotta-deep: #6e3220;
+  --terracotta-night: #4a2015;
   --cream: #faf7f0;
   --stone: #efe9dd;
   --taupe: #b9ad99;
-  --slate: #2b2f2a;
-  --slate-soft: #5c6158;
+  --slate: #2c211c;
+  --slate-soft: #6b5d54;
   --brass: #b08d3f;
   --brass-light: #c9a755;
   --brass-text: #8a6d2c;   /* darker brass for small text — WCAG AA on cream/white */
@@ -20,7 +20,7 @@
 /* Accessibility base */
 .skip-link {
   position: absolute; left: -9999px; top: 0; z-index: 100;
-  background: var(--olive-deep); color: var(--cream);
+  background: var(--terracotta-deep); color: var(--cream);
   padding: 10px 18px; border-radius: 0 0 8px 0; text-decoration: none; font-weight: 600;
 }
 .skip-link:focus { left: 0; }
@@ -57,10 +57,10 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; }
   display: flex; align-items: center; justify-content: space-between;
   padding-top: 16px; padding-bottom: 16px;
 }
-.brand { display: flex; align-items: center; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand-mark {
   font-family: "Cormorant Garamond", Georgia, serif;
-  background: var(--olive-deep); color: var(--cream);
+  background: var(--terracotta-deep); color: var(--cream);
   font-weight: 600; letter-spacing: .5px;
   padding: 6px 11px; border-radius: 8px; font-size: 1rem;
 }
@@ -74,18 +74,18 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; }
   color: var(--slate-soft); text-decoration: none; font-size: .93rem; font-weight: 500;
   transition: color .15s;
 }
-.nav a:hover { color: var(--olive-deep); }
+.nav a:hover { color: var(--terracotta-deep); }
 .nav-cta {
-  background: var(--olive-deep); color: var(--cream) !important;
+  background: var(--terracotta-deep); color: var(--cream) !important;
   padding: 9px 18px; border-radius: 8px; font-weight: 600;
 }
-.nav-cta:hover { background: var(--olive); }
+.nav-cta:hover { background: var(--terracotta); }
 
 /* ---------- Hero ---------- */
 .hero {
   background:
     radial-gradient(1100px 500px at 85% -10%, rgba(176,141,63,.14), transparent 60%),
-    linear-gradient(165deg, var(--olive-night) 0%, var(--olive-deep) 55%, #35422a 100%);
+    linear-gradient(165deg, var(--terracotta-night) 0%, var(--terracotta-deep) 55%, #5c2c1e 100%);
   color: var(--cream);
 }
 .hero-inner { padding: 104px 0 84px; }
@@ -151,7 +151,7 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; }
 .about-side { display: flex; flex-direction: column; gap: 16px; }
 .fact {
   background: #fff; border: 1px solid var(--line);
-  border-left: 4px solid var(--olive);
+  border-left: 4px solid var(--terracotta);
   border-radius: 10px; padding: 16px 20px; font-weight: 600; color: var(--slate);
 }
 .fact-label {
@@ -182,7 +182,7 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; }
   display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 36px 48px; margin-top: 44px;
 }
-.pillar { border-top: 3px solid var(--olive); padding-top: 20px; }
+.pillar { border-top: 3px solid var(--terracotta); padding-top: 20px; }
 .pillar h3 { font-size: 1.4rem; font-weight: 600; color: var(--slate); margin-bottom: 8px; }
 .pillar p { color: var(--slate-soft); font-size: .97rem; }
 
@@ -210,13 +210,13 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; }
 }
 
 /* ---------- Promise ---------- */
-.section-olive {
+.section-terracotta {
   background:
     radial-gradient(900px 400px at 15% 110%, rgba(176,141,63,.15), transparent 60%),
-    linear-gradient(160deg, var(--olive-deep) 0%, var(--olive-night) 100%);
+    linear-gradient(160deg, var(--terracotta-deep) 0%, var(--terracotta-night) 100%);
   color: var(--cream);
 }
-.section-olive h2 { color: var(--cream); }
+.section-terracotta h2 { color: var(--cream); }
 .promise-list {
   list-style: none; margin-top: 40px; max-width: 780px;
   display: flex; flex-direction: column; gap: 20px;
@@ -248,7 +248,7 @@ h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; }
   box-shadow: 0 2px 10px rgba(43,47,42,.05);
   transition: transform .12s, border-color .15s;
 }
-a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--olive); }
+a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--terracotta); }
 .contact-label {
   display: block; font-size: .75rem; text-transform: uppercase;
   letter-spacing: .1em; color: var(--brass-text); margin-bottom: 8px; font-weight: 600;
@@ -286,12 +286,12 @@ a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--oliv
   padding: 22px 26px; margin-top: 24px;
 }
 .portal-announce h2 {
-  font-size: 1.2rem; font-weight: 600; color: var(--olive-deep); margin-bottom: 10px;
+  font-size: 1.2rem; font-weight: 600; color: var(--terracotta-deep); margin-bottom: 10px;
 }
 .portal-announce ul { list-style: none; }
 .portal-announce li { padding: 6px 0; color: var(--slate-soft); font-size: .95rem; }
 .announce-date {
-  display: inline-block; background: var(--stone); color: var(--olive-deep);
+  display: inline-block; background: var(--stone); color: var(--terracotta-deep);
   font-size: .75rem; font-weight: 600; padding: 2px 8px; border-radius: 5px;
   margin-right: 10px; text-transform: uppercase; letter-spacing: .04em;
 }
@@ -329,7 +329,7 @@ a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--oliv
   padding: 8px 0 8px 26px; position: relative; color: var(--slate-soft); font-size: .95rem;
 }
 .portal-security li::before {
-  content: "•"; position: absolute; left: 8px; color: var(--olive); font-weight: 700;
+  content: "•"; position: absolute; left: 8px; color: var(--terracotta); font-weight: 700;
 }
 .portal-security strong { color: var(--slate); }
 
@@ -345,7 +345,7 @@ a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--oliv
   display: inline-block; margin-top: 14px; font-size: .92rem; font-weight: 600;
   color: var(--brass-text); text-decoration: none;
 }
-.card-cta:hover { color: var(--olive-deep); }
+.card-cta:hover { color: var(--terracotta-deep); }
 
 /* ---------- Owner section ---------- */
 .owner-grid {
@@ -365,7 +365,7 @@ a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--oliv
 }
 .owner-quote {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.5rem; font-style: italic; color: var(--olive-deep);
+  font-size: 1.5rem; font-style: italic; color: var(--terracotta-deep);
   line-height: 1.45; margin-bottom: 20px;
 }
 .owner-copy p { color: var(--slate-soft); }
@@ -388,7 +388,7 @@ a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--oliv
 .project-meta { padding: 18px 20px; }
 .project-status {
   display: inline-block; font-size: .74rem; font-weight: 600; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--olive-deep); background: var(--stone);
+  text-transform: uppercase; color: var(--terracotta-deep); background: var(--stone);
   padding: 3px 10px; border-radius: 5px; margin-bottom: 8px;
 }
 .project-loc { font-size: .85rem; color: var(--taupe-text); }
@@ -409,7 +409,7 @@ a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--oliv
 .step-num {
   font-family: "Inter", system-ui, sans-serif;
   flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
-  background: var(--olive-deep); color: var(--cream);
+  background: var(--terracotta-deep); color: var(--cream);
   display: flex; align-items: center; justify-content: center;
   font-size: .95rem; font-weight: 600;
 }
@@ -473,7 +473,7 @@ a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--oliv
 .form-note { font-size: .82rem; color: var(--taupe-text); margin: 4px 0 18px; }
 .contact-form .btn { border: none; cursor: pointer; font-family: inherit; width: 100%; }
 .form-status { margin-top: 14px; font-size: .92rem; min-height: 1.4em; }
-.form-success { color: var(--olive-deep); font-weight: 600; }
+.form-success { color: var(--terracotta-deep); font-weight: 600; }
 .form-error { color: #a33d2e; font-weight: 600; }
 .contact-side { display: flex; flex-direction: column; gap: 18px; }
 

@@ -223,7 +223,7 @@
     </section>
 
     <!-- ============ 7. OUR PROMISE ============ -->
-    <section id="promise" class="section section-olive" aria-labelledby="promise-heading">
+    <section id="promise" class="section section-terracotta" aria-labelledby="promise-heading">
       <div class="container">
         <div class="section-heading">
           <span class="eyebrow eyebrow-light">The Anabasis Promise</span>
@@ -441,6 +441,9 @@
 
         <div class="contact-layout">
           <form class="contact-form" id="project-form" novalidate>
+            <input type="hidden" name="access_key" value="eb5ee882-dd1b-4d77-9bb1-4c57151a5f1b">
+            <input type="hidden" name="subject" value="New consultation request — Anabasis Construction website">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
             <div class="form-row">
               <div class="form-field">
                 <label for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
@@ -510,7 +513,7 @@
               <label for="f-desc">Tell us about your project <span class="req" aria-hidden="true">*</span></label>
               <textarea id="f-desc" name="description" rows="4" required placeholder="A sentence or two is plenty to start."></textarea>
             </div>
-            <p class="form-note">Fields marked <span class="req">*</span> are required. Submitting opens a pre-filled email in your mail app — nothing is stored on this website.</p>
+            <p class="form-note">Fields marked <span class="req">*</span> are required. Submitting sends your request directly to us — no mail app required.</p>
             <button type="submit" class="btn btn-primary">Schedule a Consultation</button>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
           </form>
@@ -580,11 +583,12 @@
       });
     })();
 
-    // Contact form → composes a pre-filled email (static site: no backend).
-    // To switch to a form service later, replace this handler with a normal POST action.
+    // Contact form → sends directly via Web3Forms (static site, no backend of our own).
     (function () {
       var form = document.getElementById('project-form');
       var status = document.getElementById('form-status');
+      var submitBtn = form.querySelector('button[type="submit"]');
+
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var name = form.name.value.trim();
@@ -595,24 +599,35 @@
           status.className = 'form-status form-error';
           return;
         }
-        var lines = [
-          'Name: ' + name,
-          'Email: ' + email,
-          'Phone: ' + (form.phone.value || '—'),
-          'Project location: ' + (form.location.value || '—'),
-          'Project type: ' + (form.type.value || '—'),
-          'Desired start: ' + (form.start.value || '—'),
-          'Budget range: ' + (form.budget.value || '—'),
-          'Preferred contact: ' + (form.contactPref.value || '—'),
-          '',
-          'Project description:',
-          desc
-        ];
-        var subject = encodeURIComponent('Consultation request — ' + name);
-        var body = encodeURIComponent(lines.join('\n'));
-        window.location.href = 'mailto:jmarkscates@gmail.com?subject=' + subject + '&body=' + body;
-        status.textContent = 'Your email app should open with your details filled in. If it doesn\'t, email us directly at jmarkscates@gmail.com or call (479) 544-0069.';
-        status.className = 'form-status form-success';
+
+        submitBtn.disabled = true;
+        status.textContent = 'Sending…';
+        status.className = 'form-status';
+
+        var data = Object.fromEntries(new FormData(form));
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(data)
+        })
+          .then(function (res) { return res.json(); })
+          .then(function (result) {
+            submitBtn.disabled = false;
+            if (result.success) {
+              form.reset();
+              status.textContent = 'Thanks — your request has been sent. We\'ll follow up soon.';
+              status.className = 'form-status form-success';
+            } else {
+              status.textContent = 'Something went wrong sending your request. Please email us directly at jmarkscates@gmail.com or call (479) 544-0069.';
+              status.className = 'form-status form-error';
+            }
+          })
+          .catch(function () {
+            submitBtn.disabled = false;
+            status.textContent = 'Something went wrong sending your request. Please email us directly at jmarkscates@gmail.com or call (479) 544-0069.';
+            status.className = 'form-status form-error';
+          });
       });
     })();
   </script>
