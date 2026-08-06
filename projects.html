@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current &amp; Past Projects | Anabasis Construction</title>
+  <meta name="description" content="See what Anabasis Construction is building right now in Northwest Arkansas, and completed projects as they're finished — photographed honestly, labeled clearly.">
+  <link rel="canonical" href="https://anabasisconstruction.com/projects.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Current & Past Projects — Anabasis Construction">
+  <meta property="og:description" content="What we're building right now in Northwest Arkansas, and completed work as it's finished.">
+  <meta property="og:url" content="https://anabasisconstruction.com/projects.html">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Anabasis Construction — home">
+        <span class="brand-mark" aria-hidden="true">A·C</span>
+        <span class="brand-name">Anabasis <span class="brand-sub">Construction</span></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav id="site-nav" class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="index.html#process">Process</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#contact" class="nav-cta">Schedule a Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Our Work</span>
+          <h2 id="projects-heading">Current &amp; past projects.</h2>
+          <p class="section-lead">
+            Every project here is shown honestly — labeled with its real status, and
+            photographed the way it actually looks, not staged. No stock photos presented
+            as our work, ever, and nothing goes up here until it's real.
+          </p>
+        </div>
+
+        <div class="projects-status">
+          <p>
+            Our first Northwest Arkansas projects are in planning and preconstruction now.
+            As they move to framing, finishes, and completion, you'll see them here —
+            photographed honestly, labeled clearly, and shown the way they'll actually
+            look on a Tuesday.
+          </p>
+          <p>
+            In the meantime, we're glad to walk you through our planning process and
+            current project pipeline in person.
+          </p>
+          <a href="index.html#contact" class="btn btn-primary">Ask About Current Projects</a>
+        </div>
+
+        <!--
+        PROJECT CARD TEMPLATE — copy inside the .gallery grid below when real projects exist.
+        Every card must carry an accurate status label: Completed / In Progress / Rendering / Inspiration / Sample.
+        [Add project photo] [Confirm project details]
+
+        <div class="gallery">
+          <article class="project-card">
+            <img src="project1.jpg" alt="DESCRIBE THE ACTUAL PHOTO" loading="lazy" width="800" height="600">
+            <div class="project-meta">
+              <span class="project-status">In Progress</span>
+              <h3>Project Name</h3>
+              <p class="project-loc">City, AR · Project type</p>
+              <p>Short honest description of scope and status.</p>
+            </div>
+          </article>
+        </div>
+        -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 Anabasis Construction · Anabasis Construction LLC · Prairie Grove, Arkansas</span>
+      <span class="footer-links">
+        <a href="portal.html">Employee Portal</a>
+        <a href="#top">Back to top ↑</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          nav.classList.remove('nav-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
