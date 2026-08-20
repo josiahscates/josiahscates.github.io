@@ -708,3 +708,17 @@ a.contact-item:hover { transform: translateY(-2px); border-top-color: var(--terr
   .craftband { height: 240px; }
   .craftband-quote p { max-width: 12ch; }
 }
+
+/* ---------- Brand logo in header (added 2026-08-20) ----------
+   Replaces the old A·C text badge with the real horizontal lockup.
+   Intrinsic width/height are on the <img> so the header never shifts
+   while the logo loads (avoids layout shift / CLS). */
+.brand-logo {
+  height: 42px; width: auto; display: block;
+}
+@media (max-width: 860px) {
+  .brand-logo { height: 34px; }
+}
+@media (max-width: 420px) {
+  .brand-logo { height: 29px; }
+}
