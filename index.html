@@ -44,6 +44,16 @@
     "description": "Locally owned residential construction company serving Northwest Arkansas homeowners with custom homes, renovations, and additions."
   }
   </script>
+  <script>
+    /* Enable scroll-reveal hiding ONLY if JS is running and the user has not
+       asked for reduced motion. Without this class nothing is ever hidden. */
+    (function(){
+      try {
+        var m = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+        if (!m || !m.matches) document.documentElement.className += ' js-reveal';
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body id="top">
 
@@ -75,6 +85,45 @@
 
     <!-- ============ 2. HERO ============ -->
     <section class="hero" aria-labelledby="hero-heading">
+      <!-- Architectural blueprint motif. Hand-authored inline SVG: no external
+           assets, no licensing, scales cleanly, and makes no claim about work
+           performed. Decorative only — hidden from assistive tech. -->
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <defs>
+            <pattern id="blueprint-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M40 0H0V40" fill="none" stroke="currentColor" stroke-width="1" opacity=".25"/>
+            </pattern>
+            <linearGradient id="fade-right" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+              <stop offset="55%" stop-color="#fff" stop-opacity=".55"/>
+              <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+            </linearGradient>
+            <mask id="art-mask">
+              <rect width="1200" height="700" fill="url(#fade-right)"/>
+            </mask>
+          </defs>
+          <g mask="url(#art-mask)">
+            <rect width="1200" height="700" fill="url(#blueprint-grid)"/>
+            <g class="hero-art-lines" fill="none" stroke="currentColor" stroke-width="1.6"
+               stroke-linecap="round" stroke-linejoin="round">
+              <!-- gable + roofline -->
+              <path d="M700 470 L700 300 L880 190 L1060 300 L1060 470"/>
+              <path d="M660 320 L880 186 L1100 320"/>
+              <!-- truss webbing -->
+              <path d="M700 300 L880 400 L1060 300"/>
+              <path d="M880 190 L880 470"/>
+              <path d="M760 336 L760 470 M1000 336 L1000 470"/>
+              <!-- floor / foundation line -->
+              <path d="M640 470 L1120 470"/>
+              <path d="M660 500 L1100 500" opacity=".5"/>
+              <!-- dimension marks -->
+              <path d="M700 530 L1060 530" opacity=".45"/>
+              <path d="M700 522 L700 538 M1060 522 L1060 538" opacity=".45"/>
+            </g>
+          </g>
+        </svg>
+      </div>
       <div class="container hero-inner">
         <p class="hero-kicker">Custom Homes · Renovations · Additions — Northwest Arkansas</p>
         <h1 id="hero-heading">Thoughtful construction.<br>Refined craftsmanship.<br><em>Built with care.</em></h1>
@@ -92,7 +141,7 @@
 
       <!-- ============ 3. TRUST BAR ============ -->
       <div class="hero-band" role="presentation">
-        <div class="container hero-band-inner">
+        <div class="container hero-band-inner" data-reveal data-reveal-delay="2">
           <div><strong>Locally Owned</strong><span>Rooted in Prairie Grove</span></div>
           <div><strong>Owner-Led Communication</strong><span>You talk to the builder</span></div>
           <div><strong>Quality Checkpoints</strong><span>Inspected before it's covered</span></div>
@@ -104,7 +153,7 @@
     <!-- ============ 4. SERVICES ============ -->
     <section id="services" class="section" aria-labelledby="services-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow">What We Do</span>
           <h2 id="services-heading">Residential construction, planned properly.</h2>
           <p class="section-lead">
@@ -112,10 +161,11 @@
             what it should cost, and whether it's worth doing. Here's how we can help.
           </p>
         </div>
-        <div class="cards">
+        <div class="cards" data-reveal data-reveal-delay="1">
           <article class="card">
             <span class="card-num">01</span>
-            <h3>Custom Homes</h3>
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 24 L24 10 L40 24"/><path d="M12 22 L12 40 L36 40 L36 22"/><path d="M20 40 L20 29 L28 29 L28 40"/></svg>
+              <h3>Custom Homes</h3>
             <p>
               For homeowners building on their own lot or one we help you find. We plan
               around how you actually live — sightlines, light, storage, comfort — before
@@ -126,7 +176,8 @@
           </article>
           <article class="card">
             <span class="card-num">02</span>
-            <h3>Renovations &amp; Remodeling</h3>
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 38 L10 20 L26 8 L42 20 L42 38"/><path d="M10 38 L42 38"/><path d="M30 30 l8-8 4 4 -8 8 -5 1 1-5z"/></svg>
+              <h3>Renovations &amp; Remodeling</h3>
             <p>
               Kitchens, baths, and whole-home renovations — with honest guidance about
               which changes genuinely improve daily life and resale, and which just cost
@@ -136,7 +187,8 @@
           </article>
           <article class="card">
             <span class="card-num">03</span>
-            <h3>Additions</h3>
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 38 L6 22 L20 12 L34 22 L34 38"/><path d="M6 38 L34 38"/><path d="M38 26 L38 38 L44 38"/><path d="M41 14 L41 22 M37 18 L45 18"/></svg>
+              <h3>Additions</h3>
             <p>
               More room without moving — additions planned to match your home's structure,
               proportions, and neighborhood, not bolt-ons that look like afterthoughts.
@@ -146,7 +198,8 @@
           </article>
           <article class="card">
             <span class="card-num">04</span>
-            <h3>Preconstruction &amp; Feasibility</h3>
+            <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8" y="10" width="32" height="28" rx="2"/><path d="M8 18 L40 18"/><path d="M16 24 L24 24 M16 30 L32 30"/><circle cx="33" cy="25" r="4"/><path d="M36 28 L40 32"/></svg>
+              <h3>Preconstruction &amp; Feasibility</h3>
             <p>
               Not sure yet? This is where smart projects start. Lot evaluation, market and
               budget analysis, scope planning, and design coordination — so you know what's
@@ -156,16 +209,39 @@
           </article>
         </div>
       </div>
+    
+        <!-- Illustrative photography (licensed stock, Pexels — free for commercial
+             use, no attribution required). These are ATMOSPHERIC, showing the kind
+             of work described above. They are deliberately NOT in the "Our Work"
+             section, because that would imply completed Anabasis projects.
+             Replace with real job-site photography as it becomes available. -->
+        <div class="photo-row" data-reveal data-reveal-delay="2">
+          <figure class="media media-tall">
+            <img src="images/framing-residential.jpg" loading="lazy" decoding="async"
+                 alt="A new residential home under construction, framed and sheathed with roof trusses set">
+            <figcaption class="media-caption">New construction</figcaption>
+          </figure>
+          <figure class="media media-tall">
+            <img src="images/renovation-interior.jpg" loading="lazy" decoding="async"
+                 alt="Interior of an older home mid-renovation, floors protected and doors removed">
+            <figcaption class="media-caption">Renovation in progress</figcaption>
+          </figure>
+          <figure class="media media-tall">
+            <img src="images/craft-power-planer.jpg" loading="lazy" decoding="async"
+                 alt="A carpenter planing a board smooth on a workbench">
+            <figcaption class="media-caption">Finish carpentry</figcaption>
+          </figure>
+        </div>
     </section>
 
     <!-- ============ 5. WHY ANABASIS ============ -->
     <section id="why" class="section section-stone" aria-labelledby="why-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow">Why Anabasis</span>
           <h2 id="why-heading">Care is our competitive advantage.</h2>
         </div>
-        <div class="pillars">
+        <div class="pillars" data-reveal data-reveal-delay="1">
           <div class="pillar">
             <h3>You talk to the owner</h3>
             <p>No account managers, no telephone chains. The person planning your budget and walking your framing is the person who answers your call.</p>
@@ -189,7 +265,7 @@
     <!-- ============ 6. OWNER INTRODUCTION ============ -->
     <section id="about" class="section" aria-labelledby="about-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow">About the Owner</span>
           <h2 id="about-heading">Meet Josiah Scates.</h2>
         </div>
@@ -223,9 +299,58 @@
     </section>
 
     <!-- ============ 7. OUR PROMISE ============ -->
+
+    <!-- Atmospheric craft band (licensed stock, Pexels). -->
+    <section class="craftband" aria-label="Craftsmanship">
+      <img src="images/craft-hand-planing.jpg" loading="lazy" decoding="async"
+           alt="Hands smoothing a length of timber with a hand plane at a workbench">
+      <div class="craftband-quote">
+        <p>“Measured twice. Built once. Explained the whole way through.”</p>
+      </div>
+    </section>
+
+    <!-- ============ OZARK RIDGELINE — brand motif ============
+         Layered Ozark ridgelines with survey contour lines. This is atmospheric
+         brand imagery, not portfolio work: it says "Northwest Arkansas" and
+         echoes the company name (Anabasis — Xenophon's march up-country, the
+         ascent inland). Generative SVG, so no licensing and no false claim
+         about work performed. Decorative; hidden from assistive tech. -->
+    <div class="ridge" aria-hidden="true">
+      <svg viewBox="0 0 1440 260" preserveAspectRatio="none" focusable="false">
+        <defs>
+          <linearGradient id="ridge-far" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#c9bda6"/><stop offset="100%" stop-color="#bcae94"/>
+          </linearGradient>
+          <linearGradient id="ridge-mid" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#a8502f" stop-opacity=".55"/>
+            <stop offset="100%" stop-color="#6e3220" stop-opacity=".75"/>
+          </linearGradient>
+          <linearGradient id="ridge-near" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4a2015"/><stop offset="100%" stop-color="#2c211c"/>
+          </linearGradient>
+        </defs>
+
+        <!-- survey contour lines behind the hills -->
+        <g stroke="#b08d3f" fill="none" stroke-width="1" opacity=".35">
+          <path d="M0 150 C 180 120, 320 165, 500 140 S 840 105, 1010 138 S 1290 168, 1440 132"/>
+          <path d="M0 168 C 190 140, 330 182, 512 158 S 850 124, 1020 156 S 1298 184, 1440 150"/>
+          <path d="M0 186 C 200 160, 340 200, 524 176 S 860 143, 1030 174 S 1306 200, 1440 168"/>
+        </g>
+
+        <!-- far ridge -->
+        <path fill="url(#ridge-far)" opacity=".65"
+              d="M0 176 L120 140 L226 168 L338 116 L452 158 L560 128 L676 166 L790 122 L910 160 L1024 132 L1140 170 L1254 138 L1360 168 L1440 146 L1440 260 L0 260 Z"/>
+        <!-- middle ridge -->
+        <path fill="url(#ridge-mid)"
+              d="M0 206 L104 178 L214 202 L330 162 L446 198 L556 172 L672 204 L788 168 L900 200 L1018 174 L1132 206 L1248 178 L1352 204 L1440 186 L1440 260 L0 260 Z"/>
+        <!-- near ridge -->
+        <path fill="url(#ridge-near)"
+              d="M0 232 L128 212 L248 234 L368 208 L486 232 L604 210 L724 234 L844 210 L964 232 L1084 208 L1204 232 L1324 212 L1440 230 L1440 260 L0 260 Z"/>
+      </svg>
+    </div>
     <section id="promise" class="section section-terracotta" aria-labelledby="promise-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow eyebrow-light">The Anabasis Promise</span>
           <h2 id="promise-heading">What we owe you on every project.</h2>
         </div>
@@ -247,7 +372,7 @@
     <!-- ============ 8. CURRENT WORK — TEASER, FULL GALLERY LIVES ON projects.html ============ -->
     <section id="projects" class="section section-stone" aria-labelledby="projects-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow">Our Work</span>
           <h2 id="projects-heading">Current work &amp; project highlights.</h2>
           <p class="section-lead">
@@ -255,6 +380,55 @@
             photographed honestly, labeled clearly, never staged.
           </p>
         </div>
+
+        <!-- Looping build-sequence animation. A house assembles itself: site line,
+             foundation, floor, studs, rafters, roof, openings, chimney. Generative
+             SVG + CSS — no video file, no bandwidth cost, no licensing, and it
+             claims nothing about work performed. Decorative. -->
+        <div class="buildreel" data-reveal data-reveal-delay="1" aria-hidden="true">
+          <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid meet" focusable="false">
+            <defs>
+              <pattern id="reel-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+                <path d="M32 0H0V32" fill="none" stroke="#b9ad99" stroke-width="1" opacity=".28"/>
+              </pattern>
+            </defs>
+            <rect width="640" height="360" fill="url(#reel-grid)"/>
+
+            <g class="reel" fill="none" stroke="#6e3220" stroke-width="3"
+               stroke-linecap="round" stroke-linejoin="round">
+              <!-- 1 site / grade line -->
+              <path class="bs" style="--i:0" d="M70 292 L570 292" stroke="#8a6d2c"/>
+              <!-- 2 foundation -->
+              <path class="bs" style="--i:1" d="M150 292 L150 268 L490 268 L490 292"/>
+              <!-- 3 floor deck -->
+              <path class="bs" style="--i:2" d="M150 268 L490 268"/>
+              <!-- 4 wall studs -->
+              <g class="bs" style="--i:3" stroke-width="2.4">
+                <path d="M172 268 L172 176 M218 268 L218 176 M264 268 L264 176"/>
+                <path d="M376 268 L376 176 M422 268 L422 176 M468 268 L468 176"/>
+              </g>
+              <!-- 5 top plate -->
+              <path class="bs" style="--i:4" d="M150 176 L490 176"/>
+              <!-- 6 rafters -->
+              <path class="bs" style="--i:5" d="M150 176 L320 92 L490 176"/>
+              <!-- 7 ridge + collar ties -->
+              <g class="bs" style="--i:6" stroke-width="2.4">
+                <path d="M320 92 L320 176"/>
+                <path d="M236 134 L404 134"/>
+              </g>
+              <!-- 8 openings: door + windows -->
+              <g class="bs" style="--i:7" stroke-width="2.6">
+                <path d="M296 268 L296 208 L344 208 L344 268"/>
+                <rect x="186" y="206" width="46" height="40" rx="2"/>
+                <rect x="408" y="206" width="46" height="40" rx="2"/>
+              </g>
+              <!-- 9 chimney -->
+              <path class="bs" style="--i:8" d="M420 138 L420 104 L448 104 L448 154" stroke-width="2.6"/>
+            </g>
+          </svg>
+          <span class="buildreel-label">Foundation to finish — the sequence we hold to on every project.</span>
+        </div>
+
         <a href="projects.html" class="btn btn-primary">View Our Projects →</a>
       </div>
     </section>
@@ -262,7 +436,7 @@
     <!-- ============ 9. CONSTRUCTION PROCESS ============ -->
     <section id="process" class="section" aria-labelledby="process-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow">How It Works</span>
           <h2 id="process-heading">A process built to remove uncertainty.</h2>
           <p class="section-lead">
@@ -313,11 +487,11 @@
 
     <section id="testimonials" class="section section-stone" aria-labelledby="testimonials-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow">What People Say</span>
           <h2 id="testimonials-heading">Trusted by homeowners and professionals.</h2>
         </div>
-        <div class="cards">
+        <div class="cards" data-reveal data-reveal-delay="1">
           <blockquote class="testimonial">
             <p>"REAL QUOTE HERE"</p>
             <footer>— Name, Role or project relationship, Company if applicable</footer>
@@ -333,7 +507,7 @@
     <!-- ============ 11. SERVICE AREA ============ -->
     <section id="service-area" class="section section-stone" aria-labelledby="area-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow">Where We Build</span>
           <h2 id="area-heading">Serving homeowners across Northwest Arkansas.</h2>
         </div>
@@ -352,7 +526,7 @@
     <!-- ============ 12. FAQ ============ -->
     <section id="faq" class="section" aria-labelledby="faq-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow">Common Questions</span>
           <h2 id="faq-heading">Answers before you even ask.</h2>
         </div>
@@ -404,7 +578,7 @@
     <!-- ============ 13/14. FINAL CTA + CONTACT ============ -->
     <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading" data-reveal>
           <span class="eyebrow">Let's Talk</span>
           <h2 id="contact-heading">Tell us about your home.</h2>
           <p class="section-lead">
@@ -604,6 +778,38 @@
             status.className = 'form-status form-error';
           });
       });
+    })();
+  </script>
+
+  <script>
+    /* Scroll reveal — added 2026-08-19. Progressive enhancement only:
+       if IntersectionObserver is missing or JS fails, elements are revealed
+       immediately so content can never be trapped invisible. */
+    (function () {
+      var els = document.querySelectorAll('[data-reveal]');
+      if (!els.length) return;
+      /* Hard fallback: drop the .js-reveal class so the opacity:0 rule stops
+         applying altogether. This does NOT depend on a CSS transition running,
+         so it still works in a tab that never composites (background/prerender)
+         where transitions are frozen. */
+      function revealAll() {
+        for (var i = 0; i < els.length; i++) els[i].classList.add('is-visible');
+        document.documentElement.className =
+          document.documentElement.className.replace(/js-reveal/, '').trim();
+      }
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced || !('IntersectionObserver' in window)) { revealAll(); return; }
+
+      /* Safety net: IntersectionObserver does not fire while a tab is hidden
+         (background tab, prerender). If anything is still hidden after 3s,
+         show it. Motion is a nicety; unreadable content is a defect. */
+      setTimeout(revealAll, 3000);
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+      els.forEach(function (el) { obs.observe(el); });
     })();
   </script>
 
